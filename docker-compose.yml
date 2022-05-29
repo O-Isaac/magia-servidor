@@ -1,0 +1,15 @@
+services:
+  nginx:
+    container_name: MagiaServer
+    image: nginx:latest
+    volumes:
+      # Bridged Proxy
+      - ./config/default.conf:/etc/nginx/conf.d/default.conf:ro
+      # Data from github
+      - ./config/github.conf:/etc/nginx/conf.d/github.conf:ro
+      # Data from original server
+      - ./config/origin.conf:/etc/nginx/conf.d/origin.conf:ro
+      # Data from local
+      - ./data:/usr/share/nginx/html:ro
+    ports:
+      - "8080:80"
