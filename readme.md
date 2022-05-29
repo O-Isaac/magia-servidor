@@ -1,4 +1,4 @@
-[Crear Servidor](#-¿como-creo-el-servidor-el-servidor) / [Archivos de configuracion](#-archivos-default-origin-github) / [Api](#-2º-parte---crear-funcion-lambad) / [Nota](#-pequeña-anotacion)
+[Crear Servidor](#-como-creo-el-servidor-el-servidor) / [Archivos de configuracion](#-archivos-default-origin-github) / [Api](#-2º-parte---crear-funcion-lambad) / [Nota](#-pequeña-anotacion)
 
 # 🤔 ¿Como creo el servidor el servidor?
 Para crear el servidor necesitas tener docker y docker-compose instalado,
