@@ -9,7 +9,10 @@ services:
       - ./config/github.conf:/etc/nginx/conf.d/github.conf:ro
       # Data from original server
       - ./config/origin.conf:/etc/nginx/conf.d/origin.conf:ro
+      # Api response 
+      - ./config/api.conf:/etc/nginx/conf.d/api.conf:ro
       # Data from local
       - ./data:/usr/share/nginx/html:ro
     ports:
       - "8080:80"
+      - "3000:3000"
