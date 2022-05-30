@@ -1,3 +1,5 @@
+version: '3'
+
 services:
   nginx:
     container_name: MagiaServer
@@ -14,5 +16,5 @@ services:
       # Data from local
       - ./data:/usr/share/nginx/html:ro
     ports:
-      - "8080:80"
+      - "80:80"
       - "3000:3000"

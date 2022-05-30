@@ -13,9 +13,7 @@ esta en ingles 🇺🇸 no creo que sea un problema para ti.
 `config/*.conf`
 
 Estos son servidores de donde se obtendra los archivos para el juego:
-- **defaul** servidor bridge que se encarga de comunicar los servidores con un load balance.
-- **origin** servidor proxy reverso que apunta al host del juego.
-- **github** servidor proxy reverso que apunta al repositorio de github.
+- **defaul** servidor que se encargar de entregar los assets del juego
 - **api** servidor api para el cliente (requiere del puerto `3000`)
 
 Unicamente necesitaras el puerto `80` abierto en tu servidor en la nube, si planeas usarlo en local
