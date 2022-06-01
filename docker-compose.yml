@@ -9,6 +9,8 @@ services:
       - ./config/default.conf:/etc/nginx/conf.d/default.conf:ro
       # Api Server
       - ./config/api.conf:/etc/nginx/conf.d/api.conf:ro
+      # Nginx Config
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
       # Data from local
       - ./data:/usr/share/nginx/html:ro
     ports:
