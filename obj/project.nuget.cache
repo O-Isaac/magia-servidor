@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VcB4vioGqB+aNZ7cK8v9xLtlxcPhmiCYWfXV6icjLykGM9HSRIQhvX6GRfV1pCB8LFRxBAXPdLNfIOgJnD9aFg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Isaac\\source\\repos\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Isaac\\.nuget\\packages\\yarp.reverseproxy\\1.1.0\\yarp.reverseproxy.1.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
