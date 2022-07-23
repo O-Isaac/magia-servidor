@@ -15,6 +15,7 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
+    app.UseHttpsRedirection();
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
@@ -26,7 +27,7 @@ app.MapPost("/api/v1/endpoint", () => {
     dynamic obj = new ExpandoObject();
     dynamic response = new ExpandoObject();
 
-    response.endpoint = app.Urls.First().ToString() + "game";
+    response.endpoint = "https://iroha.proyectograndorder.es/game";
     response.version = 110;
     response.max_threads = 20;
 
@@ -42,7 +43,7 @@ app.MapGet("/api/v1/endpoint", () => {
     dynamic obj = new ExpandoObject();
     dynamic response = new ExpandoObject();
 
-    response.endpoint = "http://192.168.18.248/game";
+    response.endpoint = "https://iroha.proyectograndorder.es/game";
     response.version = 110;
     response.max_threads = 20;
 
@@ -54,21 +55,17 @@ app.MapGet("/api/v1/endpoint", () => {
 });
 
 
-// Configure new static server
-StaticFileOptions staticFileOptions = new StaticFileOptions
+FileServerOptions fileServerOptions = new FileServerOptions
 {
     FileProvider = new PhysicalFileProvider(Path.Combine(app.Environment.ContentRootPath, "game")),
-    RequestPath = "/game"
+    RequestPath = "/game",
+    EnableDirectoryBrowsing = app.Environment.IsDevelopment()
 };
 
-app.UseHttpsRedirection();
-app.UseStaticFiles(staticFileOptions);
 app.UseStaticFiles();
-
+app.UseFileServer(fileServerOptions);
 app.UseRouting();
 app.UseAuthorization();
-
-app.MapRazorPages();
 app.MapReverseProxy();
-
+app.MapRazorPages();
 app.Run();

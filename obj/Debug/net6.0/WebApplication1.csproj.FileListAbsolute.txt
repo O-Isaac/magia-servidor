@@ -27,3 +27,5 @@ C:\Users\Isaac\source\repos\WebApplication1\WebApplication1\obj\Debug\net6.0\ref
 C:\Users\Isaac\source\repos\WebApplication1\WebApplication1\bin\Debug\net6.0\Yarp.ReverseProxy.dll
 C:\Users\Isaac\source\repos\WebApplication1\WebApplication1\obj\Debug\net6.0\WebApplication1.csproj.CopyComplete
 C:\Users\Isaac\source\repos\WebApplication1\WebApplication1\bin\Debug\net6.0\game\magica\resource\download\asset\master\resource\scenario\json\adv\scenario_0\000001-1.json
+C:\Users\Isaac\source\repos\WebApplication1\WebApplication1\obj\Debug\net6.0\WebApplication1.Properties.Resources.resources
+C:\Users\Isaac\source\repos\WebApplication1\WebApplication1\obj\Debug\net6.0\WebApplication1.csproj.GenerateResource.cache
